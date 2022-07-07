@@ -7,7 +7,7 @@ async def main():
     time.sleep(3)
     print('func exited') # 3
 
-  loop = asyncio.new_event_loop()
+  loop = asyncio.get_event_loop()
   executor = ThreadPoolExecutor()
   loop.run_in_executor(executor, func)
 
