@@ -10,7 +10,7 @@ schedule_event = threading.Event()
 
 @app.on_event('startup')
 async def startup_schedule():
-  loop = asyncio.get_event_loop()
+  loop = asyncio.new_event_loop()
   executor = ThreadPoolExecutor()
 
   def loop_schedule(event):
